@@ -2,24 +2,24 @@
     
     <div class="row">
       <div class="col-md-4">
-         <img src="<%= @avatar %>">
+         <img src="<%=Faker::Avatar.image(rand(1...1000),"300x300","png","set#{rand(1..2).to_s}","bg#{rand(1..2).to_s}") %>">
       </div>
       <div class="col-md-4">
         <h3>
           Superhero Name:</br>
-          <span class="red"><%= @hero_prefix +' '+ @hero_name %></span></br>
+          <span class="red"><%= Faker::Superhero.name %></span></br>
         </h3>
         
         <h3>
           Superhero Power:</br>
-          <span class="red"><%= @hero_power %></span></br>
+          <span class="red"><%= Faker::Superhero.power %></span></br>
         </h3>
 
         <h4>
         Your Undercover Day Job is :</br>
-        <span class="corp_red"><%= @corp_title %></span></br>
+        <span class="corp_red"><%= Faker::Name.title %></span></br>
         Your Corporate Superpower is:</br>
-        <span class="corp_red"><%= @corp_power %></span></br></br>
+        <span class="corp_red"><%= Faker::Company.bs %></span></br></br>
         </h4>
       </div>
       
